@@ -1,3 +1,4 @@
+import requests
 
 class redirector():
 
@@ -10,9 +11,9 @@ class redirector():
 
         self.webserverIP = ws_ip
 
-    def redirect_request(request, params=None):
+    def redirect_request(self, request, params=None):
 
-        endpoint = funcoes[request]
+        endpoint = self.funcoes[request]
 
         if "<id>" not in endpoint:
 

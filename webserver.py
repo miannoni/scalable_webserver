@@ -2,7 +2,6 @@ from time import sleep
 import os
 import sys
 import requests
-
 from tarefas import *
 from flask import Flask
 from flask import jsonify
@@ -43,7 +42,7 @@ def Tarefa_id(id):
         # resp = jsonify(success=(resp != False))
         # return resp
 
-@app.route('/healthcheck')
+@app.route('/')
 def healthcheck():
     resp = jsonify(success = True)
     return resp
